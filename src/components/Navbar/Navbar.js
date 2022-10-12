@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid'
 import NavBarLinks from '../NavBarLinks/NavBarLinks';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     const [open, setOpen] = useState(true);
@@ -34,7 +35,7 @@ const Navbar = () => {
                 </div>
             </div>
             <div className=' text-center text-white font-bold text-3xl p-3'>
-                Quiz Champs
+                <Link to='/home'>Quiz Champs</Link>
             </div>
         </nav>
     );
