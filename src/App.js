@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
 import Blogs from './components/Blogs/Blogs';
+import ErrorPage from './components/ErrorPage/ErrorPage';
 import Home from './components/Home/Home';
 import Quiz from './components/Quiz/Quiz';
 import Statistics from './components/Statistics/Statistics';
@@ -55,7 +56,7 @@ function App() {
 
       { path: '/blog', element: <Blogs></Blogs>},
     ]},
-    { path: '/*', element: <div>Error 404</div>}
+    { path: '/*', element: <ErrorPage></ErrorPage>}
   ])
   return (
     <div className="App">
