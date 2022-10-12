@@ -13,7 +13,13 @@ function App() {
     children: [
       { path: '/', element: <Home></Home>},
       { path: '/home', element: <Home></Home>},
-      { path: '/statistics', element: <Statistics></Statistics>},
+      { 
+        path: '/statistics',
+        // Loading the data required for the statistics page
+        loader: async({params}) => {
+          return fetch('https://openapi.programming-hero.com/api/quiz')
+        }, 
+        element: <Statistics></Statistics>},
       { path: '/blog', element: <Blogs></Blogs>},
     ]},
     { path: '/*', element: <div>Error 404</div>}
