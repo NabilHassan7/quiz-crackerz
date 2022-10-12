@@ -12,7 +12,11 @@ function App() {
     element: <Main></Main>, 
     children: [
       { path: '/', element: <Home></Home>},
+
       { path: '/home', element: <Home></Home>},
+
+      { path: '/topics', element: <Home></Home>},
+
       { 
         path: '/statistics',
         // Loading the data required for the statistics page
@@ -20,6 +24,7 @@ function App() {
           return fetch('https://openapi.programming-hero.com/api/quiz')
         }, 
         element: <Statistics></Statistics>},
+
       { path: '/blog', element: <Blogs></Blogs>},
     ]},
     { path: '/*', element: <div>Error 404</div>}
