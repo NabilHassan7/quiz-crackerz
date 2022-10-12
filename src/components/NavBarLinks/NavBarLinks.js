@@ -1,10 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const NavBarLinks = ({route}) => {
     return (
         <div>
             <li className='mr-12'>
-                <a href={route.path}>{route.name}</a>
+                <Link to={route.path}>{route.name}</Link>
             </li>
         </div>
     );

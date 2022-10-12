@@ -1,6 +1,8 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
-import Navbar from './components/Navbar/Navbar';
+import Blogs from './components/Blogs/Blogs';
+import Home from './components/Home/Home';
+import Statistics from './components/Statistics/Statistics';
 import Main from './layout/Main';
 
 function App() {
@@ -9,8 +11,10 @@ function App() {
     { path: '/', 
     element: <Main></Main>, 
     children: [
-      { path: '/', element: <Navbar></Navbar>},
-      { path: '/home', element: <Navbar></Navbar>},
+      { path: '/', element: <Home></Home>},
+      { path: '/home', element: <Home></Home>},
+      { path: '/statistics', element: <Statistics></Statistics>},
+      { path: '/blog', element: <Blogs></Blogs>},
     ]},
     { path: '/*', element: <div>Error 404</div>}
   ])
