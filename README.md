@@ -6,6 +6,10 @@ Quiz Champs is website based quiz taking app.
 
 https://quiz-champs-nabilhassan07.netlify.app
 
+### Github Repo
+
+https://github.com/programming-hero-web-course2/b6-quiz-crackerz-NabilHassan7
+
 ### Features:
 - See the topics of the quizzes
 - Selecting one the topics will take you to the quiz page
