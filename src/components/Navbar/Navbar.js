@@ -11,12 +11,12 @@ const Navbar = () => {
         {id: 4, name: 'Blog', path: '/blog'}
     ]
     return (
-        <nav className='bg-purple-200 w-full'>
+        <nav className=' bg-purple-700 w-full'>
             
             {/* <span>{open ? 'open' : 'close'}</span> */}
             <div>
                 <div className=' flex md:flex-row justify-between'>
-                    <ul className={`bg-purple-200 md:flex w-full justify-end absolute md:static duration-500 ease-in ${!open ? 'top-6' : 'top-[-120px]'}`}>
+                    <ul className={` p-3 bg-purple-700 md:flex w-full justify-end absolute md:static duration-500 ease-in ${!open ? 'top-6' : 'top-[-120px]'}`}>
                         {
                             routes.map(route => 
                                 <NavBarLinks
@@ -27,14 +27,14 @@ const Navbar = () => {
                         }
                     </ul>
                 </div>
-                <div onClick={()=>setOpen(!open)} className="h-6 w-6 md:hidden">
+                <div onClick={()=>setOpen(!open)} className="h-8 w-8 md:hidden text-white">
                     {
                         !open ? <XMarkIcon/> : <Bars3Icon/> 
                     }
                 </div>
             </div>
-            <div className=' text-left h-10'>
-                Hello
+            <div className=' text-center text-white font-bold text-3xl p-3'>
+                Quiz Champs
             </div>
         </nav>
     );
