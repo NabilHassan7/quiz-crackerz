@@ -33,7 +33,7 @@ const Navbar = () => {
                     }
                 </div>
             </div>
-            <div>
+            <div className=' text-left h-10'>
                 Hello
             </div>
         </nav>
