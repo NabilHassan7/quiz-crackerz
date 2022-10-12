@@ -1,16 +1,39 @@
 import React from 'react';
-import { EyeIcon } from '@heroicons/react/24/solid'
+import { EyeIcon } from '@heroicons/react/24/solid';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const QuizQuestion = ({quizQuestion}) => {
     const {question, options, correctAnswer} = quizQuestion;
     const checkAnswer = (event, answer) => {
         if(answer === correctAnswer){
-            console.log("true");
+            // console.log("true");
+            correct();
         }
         else{
-            console.log('false');
+            wrong()
         }
     }
+    
+    const correct = () => { 
+        toast.success("You have selected the correct answer!", {
+          position: toast.POSITION.TOP_CENTER
+        });
+    }
+
+    const wrong = () => { 
+        toast.error("You have selected the wrong answer !", {
+          position: toast.POSITION.TOP_CENTER
+        });
+    }
+
+    const showAnswer = () => { 
+        toast.info(`The correct answer is: "${correctAnswer}"`, {
+          position: toast.POSITION.TOP_CENTER
+        });
+    }
+
     return (
         <div className='flex flex-col mt-10 border border-red-500 p-4 mx-10'>
             <div className='border border-green-400 p-4'>
@@ -19,7 +42,7 @@ const QuizQuestion = ({quizQuestion}) => {
                 </h1>
             </div>
             <div className='flex justify-center items-center p-2'>
-                <div>
+                <div onClick={() => showAnswer()}>
                     <EyeIcon className="h-6 w-6 text-blue-500"/>
                 </div>
             </div>
@@ -47,6 +70,7 @@ const QuizQuestion = ({quizQuestion}) => {
                     </div>
                 </div>
             </div>
+            <ToastContainer></ToastContainer>
         </div>
     );
 };
